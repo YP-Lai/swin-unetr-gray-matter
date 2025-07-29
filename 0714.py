@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jul 14 12:45:18 2025
-
+This code is for creating model. 
 @author: user
 """
 
