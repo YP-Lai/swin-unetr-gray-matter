@@ -1,7 +1,17 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jul 14 12:45:18 2025
-This code is for creating model. 
+ 
+This script provides the original version of the training pipeline for the model.  
+During testing, it was found that applying the following transform:
+
+    transforms.RandShiftIntensityd(keys="image", offsets=0.1, prob=1.0)
+
+introduced artifacts in the output MRI images, appearing as strange white lines.  
+After removing this transform, the issue was resolved.
+
+The script without this line is the file: train.py
+
 @author: user
 """
 
@@ -414,3 +424,4 @@ if __name__ == '__main__':
     plt.xlabel("epoch")
     plt.plot(trains_epoch, dices_avg, color="green")
     plt.show()
+
