@@ -13,7 +13,7 @@ This is my bachelor's project.
     out_channels = 1: The task is binary segmentation (gray matter vs. background).
     
   # Training setup:
-    Default: batch_size = 1, num_workers = 4.
+    Default: batch_size = 2, num_workers = 4.
     If you are using a more powerful GPU, you can increase (e.g., batch_size = 4 or 8, num_workers = 8).
   
   # Outputs: 
