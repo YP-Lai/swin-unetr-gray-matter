@@ -95,5 +95,6 @@ with torch.no_grad():
         nib_img = nib.Nifti1Image(output_seg.astype(np.uint8), affine=affine)
         out_path = os.path.join(output_dir, f"{base_filename}_segmentation.nii.gz")
         nib.save(nib_img, out_path)
-        print(f"✅ 已儲存分割結果：{out_path}")
+        print(f"saved results to：{out_path}")
+
 
