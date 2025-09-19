@@ -175,7 +175,7 @@ def get_loader(batch_size, data_dir, json_list, fold, roi):
 data_dir = r"F:\yplai\test"
 json_list = r"F:\yplai\test\dataset_graymatter_with_folds.json"
 roi = (128, 128, 128)
-batch_size = 2
+batch_size = 1
 sw_batch_size = 4
 fold = 1
 infer_overlap = 0.5
