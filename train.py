@@ -171,14 +171,7 @@ def get_loader(batch_size, data_dir, json_list, fold, roi):
 
     return train_loader, val_loader
 
-"""## Set dataset root directory and hyper-parameters
-
-The following hyper-parameters are set for the purpose of this tutorial. However, additional changes, as described below, maybe beneficial.
-
-If GPU memory is not sufficient, reduce sw_batch_size to 2 or batch_size to 1.
-
-Decrease val_every (validation frequency) to 1 for obtaining more accurate checkpoints.
-"""
+"""## Set dataset root directory and hyper-parameters"""
 data_dir = r"F:\yplai\test"
 json_list = r"F:\yplai\test\dataset_graymatter_with_folds.json"
 roi = (128, 128, 128)
@@ -206,10 +199,7 @@ plt.title("label")
 plt.imshow(label[:, :, 78])
 plt.show()
 
-"""## Create Swin UNETR model
-
-In this scetion, we create Swin UNETR model for the 3-class brain tumor semantic segmentation. We use a feature size of 48. We also use gradient checkpointing (use_checkpoint) for more memory-efficient training. However, use_checkpoint for faster training if enough GPU memory is available.  
-"""
+"""## Create Swin UNETR model"""
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -217,7 +207,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = SwinUNETR(
     img_size=roi,
     in_channels=1,
-    out_channels=1,   # 改成1通道
+    out_channels=1, 
     feature_size=48,
     drop_rate=0.0,
     attn_drop_rate=0.0,
