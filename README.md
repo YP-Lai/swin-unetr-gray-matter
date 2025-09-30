@@ -18,4 +18,4 @@ This is my bachelor's project.
   
   # Outputs: 
     During training, the script plots: Validation Mean Dice (Val Mean Dice) and Epoch Average Loss
-3. segmentation.py:
+
